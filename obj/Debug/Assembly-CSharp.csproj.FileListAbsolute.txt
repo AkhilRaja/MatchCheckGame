@@ -1,0 +1,42 @@
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEditor.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.Networking.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Unity.UNetWeaver.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.xml
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEditor.xml
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.UI.xml
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\Temp\bin\Debug\UnityEngine.Networking.xml
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\obj\Debug\Assembly-CSharp.dll
+C:\Users\ArKratos\Documents\Freelance\GoonSchoolMathpAck\obj\Debug\Assembly-CSharp.pdb
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Assembly-CSharp.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Assembly-CSharp.pdb
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEditor.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.Networking.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.UI.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Mono.Cecil.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Unity.SerializationLogic.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Unity.DataContract.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Unity.UNetWeaver.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Unity.CecilTools.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.xml
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEditor.xml
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.UI.xml
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\Temp\bin\Debug\UnityEngine.Networking.xml
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\obj\Debug\Assembly-CSharp.dll
+H:\EDiary - Days as a Developer\Freelance\GoonSchoolMathPack\obj\Debug\Assembly-CSharp.pdb

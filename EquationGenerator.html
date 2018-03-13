@@ -1,0 +1,425 @@
+<head>
+	<script src="math.min.js" type="text/javascript"></script>
+</head>
+
+
+<script type="text/javascript">
+
+////Do my shit here. Defining the schema and other shit
+
+/*
+
+Max number of tiles : 7
+
+The LHS 
+
+3 Difficulty Levels
+
+Easy : Peasy
+NO of operators : 1
+No of operands : n+1 = 2
+Operands used : (-,+)
+e.g a+a = d;
+
+
+Medium
+NO of operators : 2
+No of operands : n+1 = 3
+Operands used : (-,+,*)
+e.g a+a+c = d;
+
+Hard
+NO of operators : 3
+No of operands : n+1 = 4
+Operands used : (-,+,*,/)
+e.g a*b+c = answer+junk
+
+The RHS
+=  Value
+
+*/
+
+console.log("Hello Here are your Equations");
+
+
+var mode = "Hard"	;
+var no_equations = 25;
+
+
+
+
+var string = [];
+var operator_easy = ["+","-"];
+var operator_intermediary = ["+","-"];
+var operator_hard = ["*"];
+var i =0; 	
+var output_string = [];
+var easy_i = 0;
+var medium_i =0 ;
+
+
+function easy_equationGenerator(no_equations)
+{
+	for( easy_i = 0,k=0; easy_i < no_equations ; easy_i++)
+	{
+	
+			string[k++] = Math.floor((Math.random() * 9) + 1);
+			var temp = Math.floor((Math.random() * 9) + 1);
+		
+			
+			if(temp%2 == 0)
+			{
+
+				string[k++] = operator_easy[0];
+			} 
+			else 
+			{
+				string[k++] = operator_easy[1];
+			}
+				
+			
+			string[k++] = Math.floor((Math.random() * 9) + 1);
+			//console.log(string);
+			
+			create_RHS(inputStringEvaluator(string.join("")),k);			
+			string = [];
+			k=0;
+ 	}
+}
+
+function medium_equationGenerator(no_equations)
+{
+	for( medium_i = 0,k=0; medium_i < no_equations ; medium_i++)
+	{
+	
+			string[k++] = Math.floor((Math.random() * 89) + 10);
+			
+			var temp = Math.floor((Math.random() * 9) + 1);
+			if(temp%2 == 0)
+			{
+
+				string[k++] = operator_easy[0];
+			} 
+			else 
+			{
+				string[k++] = operator_easy[1];
+			}
+				
+			
+			string[k++] = Math.floor((Math.random() * 89) + 10);
+			
+			
+			create_RHS(inputStringEvaluator(string.join("")),k);			
+			string = [];
+			k=0;
+			console.log(medium_i);
+ 	}
+}
+
+function hard_equationGenerator()
+{
+
+	for( i = 0,k=0; i < no_equations ; i++)
+	{
+	
+			string[k++] = Math.floor((Math.random() * 9) + 1);
+			
+			var temp = Math.floor((Math.random() * 9) + 1);
+			if(temp%2 == 0)
+			{
+				var temp2 = Math.floor((Math.random() * 9) + 1); 
+				if(temp2 % 2 == 0)	
+				string[k++] = operator_easy[0];
+				else
+				string[k++] = operator_easy[0];
+			} 
+			else 
+			{
+				string[k++] = operator_hard[0];
+			}
+				
+			
+			string[k++] = Math.floor((Math.random() * 9) + 1);
+			//console.log(string);
+			if(string[k-2] == "*")
+			{
+				temp = Math.floor((Math.random() * 9) + 1);
+				if(temp%2 == 0)	
+				string[k++] = operator_easy[0];
+				else 
+				string[k++] = operator_easy[1];
+			}
+			else
+				string[k++] = operator_hard[0];
+			
+			string[k++] = Math.floor((Math.random() * 9) + 1);
+			//console.log(string);
+			create_RHS(inputStringEvaluator(string.join("")),k);			
+			string = [];
+			k=0;
+ 	}
+
+}
+
+function create_RHS(value, index)
+{
+		var option = 1;
+	/////1) Add an Extra Digit to either of the three operands (Even Indexes)
+	
+	/////2) Add an Extra Operator and Operand
+		var correct = math.eval(string.join(""));
+		
+		string[index++] = "=";
+		
+		if(mode == "Easy")
+			string[index] = value;
+		
+		if(mode == "Medium")
+		{
+			string[index] = value;
+		
+		}
+
+		if(mode == "Hard")
+		{
+			var wrongvalue = value;
+			if(correct == wrongvalue)
+				wrongvalue = Math.floor((Math.random() * 19) + 10); 
+			
+			var temp = Math.floor((Math.random() * 9) + 1);
+			if(temp % 2 == 0)
+			{
+				string[index++] = wrongvalue;
+				var temp2 = Math.floor((Math.random() * 9) + 1);
+				if(temp % 2 == 0)
+				{
+					string[index++] = operator_easy[0];
+				}	
+				else{
+					string[index++] = operator_easy[1];
+				}
+
+				string[index] = correct;  
+			}	
+			else{
+				string[index++] = correct;
+				var temp2 = Math.floor((Math.random() * 9) + 1);
+				if(temp % 2 == 0)
+				{
+					string[index++] = operator_easy[0];
+				}	
+				else{
+					string[index++] = operator_easy[1];
+				}
+
+				string[index] = wrongvalue;
+			}
+				
+	//		console.log(string);
+			output_string[i] = string.join("");
+
+
+			if(i >=24)		
+			saveTextAsFile();
+			////////////////Hard Equations Output
+		}
+			
+		if(mode=="Easy")
+			pickanOperandpos(string.length,value);
+		if(mode =="Medium")
+			pickoperandshift(string.length,value);
+}
+
+function saveTextAsFile()
+{
+	//output_string.join("");
+	output_string = output_string.join(",").split(',').join("\r\n");
+    var textFileAsBlob = new Blob([output_string], {type:'text/plain'});
+    var fileNameToSaveAs = "Equat";
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null)
+    {
+        // Chrome allows the link to be clicked
+        // without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    else
+    {
+        // Firefox requires the link to be added to the DOM
+        // before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+}
+function pickoperandshift(end, value)
+{
+	
+	while(true)
+	{
+		random_pos = Math.floor((Math.random()*end));
+		if(random_pos%2==0)
+		{
+			break;
+		}	
+	}
+
+	shiftArray(random_pos+1,0);
+	shiftArray(random_pos+2,1);
+	///////////////////////////////////Pickup from here
+	
+}
+
+function pickanOperandpos(end,value)
+{
+	
+	
+		if(value>9)
+		{
+			random_pos = Math.floor((Math.random() * end-2)+1);
+			if(random_pos<0)
+				{
+					random_pos=0;
+				}
+			string[end++] = value %10;
+			string[end-=2]	= Math.floor(value/10);	
+		}
+		else
+		{
+			random_pos = Math.floor((Math.random() * end+1));
+		}
+
+	shiftArray(random_pos,1);
+}
+
+
+function shiftArray(pos,done)
+{
+	if(done == 'undefined')
+		done = 1;
+
+	if(pos <= string.length-1)
+	{
+		for(i = string.length-1; i >= pos; i--)
+		{
+			string[i+1] = string[i];	
+		}
+	}
+
+	string[pos] = " ";
+	
+	
+	if(mode == "Easy")
+		insurtJunkaftershift(pos);		
+		
+	if(done == 1 && mode == "Medium")
+	{	
+		random = Math.floor((Math.random() * 9) + 1);
+		if(random%2==0)
+		string[pos-1] = operator_easy[0];
+		else
+		string[pos-1] = operator_easy[1];
+		string[pos] = Math.floor((Math.random() * 89) + 10);
+
+		//console.log(string);
+		//console.log(i);
+		output_string[medium_i] = string.join("");		
+		if(medium_i >=24)
+			saveTextAsFile();
+		///////////////////Medium String Output
+	}	
+	
+	
+}
+
+function insurtJunkaftershift(pos)
+	{
+		string[pos] = Math.floor((Math.random() * 9) + 1);
+		//console.log(string);
+		output_string[easy_i] = string.join("");
+		
+		if(easy_i >=24)		
+		saveTextAsFile();
+		
+		//////////////////////////Easy String output
+	}
+
+function inputStringEvaluator(inputstring)
+{
+
+	return expr(inputstring);
+
+}
+	
+	////Parser from left to right
+
+	function expr (expr) {
+
+    var chars = expr.split("");
+    var n = [], op = [], index = 0, oplast = true;
+
+    n[index] = "";
+
+    // Parse the expression
+    for (var c = 0; c < chars.length; c++) {
+
+        if (isNaN(parseInt(chars[c])) && chars[c] !== "." && !oplast) {
+            op[index] = chars[c];
+            index++;
+            n[index] = "";
+            oplast = true;
+        } else {
+            n[index] += chars[c];
+            oplast = false;
+        }
+    }
+
+    // Calculate the expression
+    expr = parseFloat(n[0]);
+    for (var o = 0; o < op.length; o++) {
+        var num = parseFloat(n[o + 1]);
+        switch (op[o]) {
+            case "+":
+                expr = expr + num;
+                break;
+            case "-":
+                expr = expr - num;
+                break;
+            case "*":
+                expr = expr * num;
+                break;
+            case "/":
+                expr = expr / num;
+                break;
+        }
+    }
+
+    return expr;
+}
+
+
+switch(mode)
+{
+	case "Easy" :  
+	easy_equationGenerator(no_equations);
+	break;
+	
+	case "Medium" :
+	medium_equationGenerator(no_equations)
+	break;
+
+	case "Hard" :
+	hard_equationGenerator(no_equations);
+	break;
+}
+
+
+
+
+
+</script>
